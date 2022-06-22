@@ -19,7 +19,7 @@ public class Usuario {
     private String idade;
     private String sexo;
     private String ultimoimc;
-    private String imc;
+    private double imc;
     
 	public Long getId() {
 		return id;
@@ -63,10 +63,10 @@ public class Usuario {
 	public void setUltimoimc(String ultimoimc) {
 		this.ultimoimc = ultimoimc;
 	}
-	public String getImc() {
+	public double getImc() {
 		return imc;
 	}
-	public void setImc(String imc) {
+	public void setImc(double imc) {
 		this.imc = imc;
 	}
 		

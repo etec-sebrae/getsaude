@@ -24,6 +24,25 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return repository.findByEmail(email);
 		
 	}
-	
 
+	@Override
+	public ResponseEntity<?> atualizarUsuario(Usuario usuario) {
+		Usuario retorno =     repository.save(usuario);
+		return ResponseEntity.ok(retorno);	
+
+}
+
+	@Override
+	public ResponseEntity<?> atualizarUsuario(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Usuario getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 }

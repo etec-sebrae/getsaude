@@ -10,6 +10,11 @@ public interface UsuarioService {
 	
 	public Usuario getByEmail(String email);
 	
+	public ResponseEntity<?> atualizarUsuario(Usuario usuario);
+
+	ResponseEntity<?> atualizarUsuario(Long id);
+
+	Usuario getById(Long id);
 	
 
 }

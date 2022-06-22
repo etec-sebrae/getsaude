@@ -25,7 +25,7 @@ public class UsuarioController {
 		return ResponseEntity.ok(retorno).getStatusCode().CREATED;
 	}
 	
-	@GetMapping("login-usuario")
+	@PostMapping("login-usuario")
 	public ResponseEntity<?> loginUsuario(@RequestBody Usuario usuario){
 		Usuario retorno = service.getByEmail(usuario.getEmail());
 		if( usuario.getSenha().equals(retorno.getSenha())){
@@ -36,5 +36,10 @@ public class UsuarioController {
 		
 	}
 	
-
+	@PostMapping("atualizar-usuario")
+	public ResponseEntity atualizarUsuario (@RequestBody Usuario usuario){
+		ResponseEntity<?> retorno = service.atualizarUsuario(usuario);
+		return ResponseEntity.ok(retorno);
+	}
+	
 }
